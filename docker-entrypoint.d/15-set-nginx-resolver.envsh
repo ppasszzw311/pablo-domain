@@ -1,0 +1,3 @@
+#!/bin/sh
+
+export NGINX_RESOLVER="${NGINX_RESOLVER:-$(awk '/^nameserver / { print $2; exit }' /etc/resolv.conf)}"

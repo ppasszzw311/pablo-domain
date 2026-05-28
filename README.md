@@ -98,6 +98,14 @@ server {
 
 Each subdomain usually gets its own `server` block.
 
+This repository currently routes:
+
+```text
+simple-api.makfichen.dev -> http://simple-api.zeabur.internal:8080
+```
+
+That upstream is a Zeabur private networking hostname, so it only resolves when this nginx service runs inside the same Zeabur project as `simple-api`.
+
 ## Step 5: Route by path
 
 If you want one domain to route to multiple services by path:
